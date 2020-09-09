@@ -186,13 +186,6 @@ export class Settings extends StateMixin(View) {
                               </pl-toggle-button>
                           `
                         : ""}
-
-                    <h3>${$l("Import / Export")}</h3>
-
-                    <button class="item tap" @click=${() => this._import()}>${$l("Import...")}</button>
-
-                    <button class="item tap" @click=${() => this._export()}>${$l("Export...")}</button>
-
                     <h3>${$l("Support")}</h3>
 
                     <button @click=${() => this._openWebsite()} class="item tap">${$l("Website")}</button>
