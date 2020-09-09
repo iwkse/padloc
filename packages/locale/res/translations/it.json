@@ -259,7 +259,7 @@
   ],
   [
     "Vault",
-    "Caveau"
+    "Cassaforte"
   ],
   [
     "Create & Edit",
@@ -323,7 +323,7 @@
   ],
   [
     "Target Vault",
-    "Caveau Selezionato"
+    "Cassaforte Selezionata"
   ],
   [
     "Format",
@@ -622,7 +622,7 @@
   ],
   [
     "My Vault",
-    "Il mio Caveau"
+    "La mia Cassaforte"
   ],
   [
     "Tags",
@@ -666,7 +666,7 @@
   ],
   [
     "Some items in your selection are from Vaults you don't have write access to and cannot be deleted. Do you want to proceed deleting the other items?",
-    "Alcuni elementi nella tua selezione provengono da un Caveau a cui non hai accesso in scrittura e non possono essere eliminati. Vuoi procedere eliminando gli altri elementi?"
+    "Alcuni elementi nella tua selezione provengono da una Cassaforte a cui non hai accesso in scrittura e non possono essere eliminati. Vuoi procedere eliminando gli altri elementi?"
   ],
   [
     "Yes",
@@ -690,7 +690,7 @@
   ],
   [
     "Some items in your selection are from Vaults you don't have write access to and cannot be moved. Do you want to proceed moving the other items?",
-    "Alcuni elementi nella tua selezione provengono da un Caveau a cui non hai accesso in scrittura e non possono essere spostati. Vuoi procedere spostando gli altri elementi?"
+    "Alcuni elementi nella tua selezione provengono da una Cassaforte a cui non hai accesso in scrittura e non possono essere spostati. Vuoi procedere spostando gli altri elementi?"
   ],
   [
     "No Name",
@@ -818,7 +818,7 @@
   ],
   [
     "Vaults",
-    "Caveau"
+    "Casseforti"
   ],
   [
     "read",
@@ -930,7 +930,7 @@
   ],
   [
     "New Vault",
-    "Nuovo Caveau"
+    "Nuova Cassaforte"
   ],
   [
     "Subscription",
