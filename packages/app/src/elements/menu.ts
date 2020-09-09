@@ -267,7 +267,6 @@ export class Menu extends StateMixin(BaseElement) {
     render() {
         const mainVault = app.mainVault;
         const account = app.account;
-
         if (!mainVault || !account) {
             return html``;
         }
@@ -276,7 +275,6 @@ export class Menu extends StateMixin(BaseElement) {
 
         const tags = app.state.tags;
 
-        const count = app.count;
 
         const showSettingsWarning =
             app.billingEnabled &&
@@ -304,84 +302,6 @@ export class Menu extends StateMixin(BaseElement) {
                             <pl-icon icon="list"></pl-icon>
 
                             <div>${$l("Items")}</div>
-                        </li>
-
-                        <li
-                            class="sub-item tap favorites"
-                            @click=${() => this._goTo("items", { host: true })}
-                            ?selected=${this.selected === "host"}
-                            ?hidden=${!count.currentHost}
-                        >
-                            <pl-icon icon="web"></pl-icon>
-
-                            <div>${this.app.state.currentHost}</div>
-
-                            <div class="detail">${count.currentHost}</div>
-                        </li>
-
-                        <li
-                            class="sub-item tap"
-                            @click=${() => this._goTo("items", { recent: true })}
-                            ?selected=${this.selected === "recent"}
-                        >
-                            <pl-icon icon="time"></pl-icon>
-
-                            <div>${$l("Recently Used")}</div>
-
-                            <div class="detail">${count.recent}</div>
-                        </li>
-
-                        <li
-                            class="sub-item tap favorites"
-                            @click=${() => this._goTo("items", { favorites: true })}
-                            ?selected=${this.selected === "favorites"}
-                        >
-                            <pl-icon icon="favorite"></pl-icon>
-
-                            <div>${$l("Favorites")}</div>
-
-                            <div class="detail">${count.favorites}</div>
-                        </li>
-
-                        <li
-                            class="sub-item tap"
-                            @click=${() => this._goTo("items", { attachments: true })}
-                            ?selected=${this.selected === "attachments"}
-                        >
-                            <pl-icon icon="attachment"></pl-icon>
-
-                            <div>${$l("Attachments")}</div>
-
-                            <div class="detail">${count.attachments}</div>
-                        </li>
-
-                        <li
-                            class="sub-item tap vault"
-                            @click=${() => this._goTo("items", { vault: mainVault.id })}
-                            ?selected=${this.selected === `vault/${mainVault.id}`}
-                        >
-                            <pl-icon icon="vault"></pl-icon>
-                            <div>${$l("My Vault")}</div>
-                            ${mainVault.error
-                                ? html`
-                                      <div
-                                          class="detail tap warning"
-                                          @click=${(e: Event) => this._displayVaultError(mainVault, e)}
-                                      >
-                                          <pl-icon icon="error"></pl-icon>
-                                      </div>
-                                  `
-                                : itemsQuota !== -1
-                                ? html`
-                                      <div class="detail tap warning" @click=${this._getPremium}>
-                                          ${mainVault.items.size} / ${itemsQuota}
-                                      </div>
-                                  `
-                                : html`
-                                      <div class="detail">
-                                          ${mainVault.items.size}
-                                      </div>
-                                  `}
                         </li>
 
                         ${app.orgs.map(org => {
