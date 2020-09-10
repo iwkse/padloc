@@ -65,8 +65,6 @@ export class CreateItemDialog extends Dialog<Vault, VaultItem> {
     ];
 
     renderContent() {
-        let exclude_myvault = app.vaults.filter(v => app.hasWritePermissions(v));
-        exclude_myvault.shift();
         return html`
             <header>
                 <div class="title flex">${$l("New Vault Item")}</div>
@@ -77,7 +75,7 @@ export class CreateItemDialog extends Dialog<Vault, VaultItem> {
                     id="vaultSelect"
                     class="vault-select tap item"
                     icon="vault"
-                    .options=${exclude_myvault}
+                    .options=${app.vaults.filter(v => app.hasWritePermissions(v))}
                 ></pl-select>
 
                 <div class="message">
